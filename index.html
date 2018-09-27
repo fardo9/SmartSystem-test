@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="path/to/image.jpg">	 
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.min.css">
+  
+</head>
+<style>
+.menu-list-store:hover .menu-list-store-sub{
+	display: block;	
+}
+.menu-list-home:hover .menu-list-home-sub{
+	display: block;	
+}
+.overlay {
+	display:none; 
+	position: fixed; 
+	width: 100%;
+	z-index:999; 
+	opacity:0.5; 
+	background-image: url(img/overlay.png);
+	-webkit-background-size: contain;
+	     -o-background-size: contain;
+	        background-size: contain;
+	top:0; 
+	right:0; 
+	left:0; 
+	bottom:0;  }
+.popup {
+ 	position: fixed;   
+	top: 50%; 
+	opacity: 1;
+	left: 50%; 
+	z-index: 9999;  
+	padding: 30px;
+	box-shadow: 0 0 10px #ccc;
+	transform: translate(-50%, -50%);
+}
+	
+
+</style>
+<body>
+
+<!-- BEGIN BODY -->
+			
+<div class="main-wrapper">
+
+<!-- BEGIN HEADER -->
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="row">
+						<div class="navbar">
+							<div class="col-lg-8">
+								<div class="navbar-menu">
+									<div class="navbar-menu-block">
+
+										<a href="#" class="navbar-menu-btn menu-btn">
+											<span></span>
+										</a>
+									</div>
+									<ul class="navbar-menu-item hidden-xs">
+											<li><a href="#">Home</a></li>
+											<li><a href="#">Store</a></li>
+											<li><a href="#">Blog</a></li>
+											<li><a href="#">About</a></li>
+											<li><a href="#">Contact</a></li>
+									</ul> 
+								</div>
+								
+							</div>
+							<div class="col-lg-4 col-xs-12">
+								<div class="navbar-menu-social-item">
+									<div class="item-search">
+										<a href="#" class="search">
+											<img src="img/social-icon/Search-Icon.jpg">
+										</a>
+									</div>
+								
+									<div class="item-fb">
+										<a href="#">
+											<img src="img/social-icon/Facebook-Icon.jpg">
+										</a>
+									</div>
+									<div class="item-twitter">
+										<a href="#">
+											<img src="img/social-icon/Twitter-Icon.jpg">
+										</a>
+									</div>
+									<div class="item-google">
+										<a href="#" class="item-g">
+											<img src="img/social-icon/G+-Icon-copy.jpg">
+										</a>
+									</div>
+								
+									<div class="item-user">
+										<a href="#" class="open_popup" rel="popup">
+											<i class="fas fa-user-alt"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+	</header>
+	
+<!-- HEADER EOF   -->	
+
+
+<!-- BEGIN CONTENT -->
+	<section class="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="row">
+						<div class="col-lg-6 col-md-12">
+
+						<!--BEGIN DPORMENU BLOCK-->
+							<div class="nav-block">
+								<div class="nav-menu">
+									<nav class="menu-list">
+										<div class="menu-list-home">
+								        	<i class="fas fa-home fa-lg"></i>
+								        		<a href="#">Home</a>
+
+								        	<div class="menu-list-home-sub">	
+											    <div class="sub-tech">
+												    <a href="#" class="item-tech">Home</a>
+													    <div class="sub-tech-arrow">
+															<img src="img/slider-img/right-arrow-slider.png">
+													    </div>
+												    <div class="sub-tech-link">
+												     	<a href="#">Software & Apps</a>
+											     		<a href="#">Gadgets</a>
+												     	<a href="#">Mobile</a>
+												    </div>	
+											     </div>
+											     <div class="sub-entertainment">
+													<a href="#" class="sub-enter">Entertainment</a>
+														<div class="sub-tech-arrow">
+															<img src="img/slider-img/right-arrow-slider.png">
+													    </div>
+											     	<div class="sub-enter-link">
+											     		<a href="#">Film</a>
+											     		<a href="#">Gaming</a>
+											     		<a href="#">Music</a>
+											     		<a href="#">Sport</a>
+											     	</div>	
+											   	</div>
+								        	</div>
+								        </div>
+								        <div class="menu-list-home">
+								        	<i class="fas fa-shopping-cart fa-lg"></i>
+								        		<a href="#">Store</a>
+
+								        	<div class="menu-list-home-sub">	
+											    <div class="sub-tech">
+												    <a href="#" class="item-tech">Store</a>
+													    <div class="sub-tech-arrow">
+															<img src="img/slider-img/right-arrow-slider.png">
+													    </div>
+												    <div class="sub-tech-link">
+												     	<a href="#">Software & Apps</a>
+											     		<a href="#">Gadgets</a>
+												     	<a href="#">Mobile</a>
+												    </div>	
+											     </div>
+											     <div class="sub-entertainment">
+													<a href="#" class="sub-enter">Entertainment</a>
+														<div class="sub-tech-arrow">
+															<img src="img/slider-img/right-arrow-slider.png">
+													    </div>
+											     	<div class="sub-enter-link">
+											     		<a href="#">Film</a>
+											     		<a href="#">Gaming</a>
+											     		<a href="#">Music</a>
+											     		<a href="#">Sport</a>
+											     	</div>	
+											   	</div>
+								        	</div>
+								        </div>
+										<!--BEGIN LIST MENU BLOG-->
+								       	<div class="menu-list-home">
+								        	<i class="fas fa-edit fa-lg"></i>
+								        		<a href="#">Blog</a>
+
+								        	<div class="menu-list-home-sub">	
+											    <div class="sub-tech">
+												    <a href="#" class="item-tech">Tech</a>
+													    <div class="sub-tech-arrow">
+															<img src="img/slider-img/right-arrow-slider.png">
+													    </div>
+												    <div class="sub-tech-link">
+												     	<a href="#">Software & Apps</a>
+											     		<a href="#">Gadgets</a>
+												     	<a href="#">Mobile</a>
+												    </div>	
+											     </div>
+											     <div class="sub-entertainment">
+													<a href="#" class="sub-enter">Entertainment</a>
+														<div class="sub-tech-arrow">
+															<img src="img/slider-img/right-arrow-slider.png">
+													    </div>
+											     	<div class="sub-enter-link">
+											     		<a href="#">Film</a>
+											     		<a href="#">Gaming</a>
+											     		<a href="#">Music</a>
+											     		<a href="#">Sport</a>
+											     	</div>	
+											   	</div>
+											   	<div class="sub-business">
+											   		<a href="#" class="item-business">Business</a>
+												   		<div class="sub-tech-arrow">
+															<img src="img/slider-img/right-arrow-slider.png">
+													    </div>
+											     	<div class="sub-business-link">
+											     		<a href="#">Jobs</a>
+											     		<a href="#">Maketing</a>
+											     		<a href="#">Media</a>
+											     	</div>
+											   	</div>
+											   	<div class="sub-lifestyle">
+											   		<a href="#" class="item-lifestyle">Lifestyle</a>
+												   		<div class="sub-tech-arrow">
+															<img src="img/slider-img/right-arrow-slider.png">
+													    </div>
+											     	<div class="sub-lifestyle-link">
+											     		<a href="#">Home</a>
+											     		<a href="#">Health	& Fitness</a>
+											     		<a href="#">Travel & Leisure</a>
+											     	</div>
+											   	</div>
+								        	</div>
+								        </div>
+								        <!--LIST MENU BLOG EOF-->
+
+								        <!--BEGIN LIST MENU COMMUNITY-->
+								        <div class="menu-list-home">
+								        	<i class="fas fa-users fa-lg"></i>
+									      		<a href="#">Community</a></li>
+												
+												<div class="menu-list-home-sub">	
+												    <div class="sub-tech">
+													    <a href="#" class="item-tech">Community</a>
+														    <div class="sub-tech-arrow">
+																<img src="img/slider-img/right-arrow-slider.png">
+														    </div>
+													    <div class="sub-tech-link">
+													     	<a href="#">Software & Apps</a>
+												     		<a href="#">Gadgets</a>
+													     	<a href="#">Mobile</a>
+													    </div>	
+												     </div>
+												     <div class="sub-entertainment">
+														<a href="#" class="sub-enter">Entertainment</a>
+															<div class="sub-tech-arrow">
+																<img src="img/slider-img/right-arrow-slider.png">
+														    </div>
+												     	<div class="sub-enter-link">
+												     		<a href="#">Film</a>
+												     		<a href="#">Gaming</a>
+												     		<a href="#">Music</a>
+												     		<a href="#">Sport</a>
+												     	</div>	
+												   	</div>
+									        	</div>
+								        </div>
+								        <!--LIST MENU COMMUNITY EOF-->
+
+									    <div class="menu-list-home">
+								        	<i class="fas fa-trophy fa-lg"></i>
+								        		<a href="#">Contests</a>
+
+								        	<div class="menu-list-home-sub">	
+											    <div class="sub-tech">
+												    <a href="#" class="item-tech">Contests</a>
+													    <div class="sub-tech-arrow">
+															<img src="img/slider-img/right-arrow-slider.png">
+													    </div>
+												    <div class="sub-tech-link">
+												     	<a href="#">Software & Apps</a>
+											     		<a href="#">Gadgets</a>
+												     	<a href="#">Mobile</a>
+												    </div>	
+											     </div>
+											     <div class="sub-entertainment">
+													<a href="#" class="sub-enter">Entertainment</a>
+														<div class="sub-tech-arrow">
+															<img src="img/slider-img/right-arrow-slider.png">
+													    </div>
+											     	<div class="sub-enter-link">
+											     		<a href="#">Film</a>
+											     		<a href="#">Gaming</a>
+											     		<a href="#">Music</a>
+											     		<a href="#">Sport</a>
+											     	</div>	
+											   	</div>
+								        	</div>
+								        </div>
+								        <div class="menu-list-home">
+								        	<i class="fas fa-info-circle fa-lg"></i>
+								        		<a href="#">About</a>
+
+								        	<div class="menu-list-home-sub">	
+											    <div class="sub-tech">
+												    <a href="#" class="item-tech">About</a>
+													    <div class="sub-tech-arrow">
+															<img src="img/slider-img/right-arrow-slider.png">
+													    </div>
+												    <div class="sub-tech-link">
+												     	<a href="#">Software & Apps</a>
+											     		<a href="#">Gadgets</a>
+												     	<a href="#">Mobile</a>
+												    </div>	
+											     </div>
+											     <div class="sub-entertainment">
+													<a href="#" class="sub-enter">Entertainment</a>
+														<div class="sub-tech-arrow">
+															<img src="img/slider-img/right-arrow-slider.png">
+													    </div>
+											     	<div class="sub-enter-link">
+											     		<a href="#">Film</a>
+											     		<a href="#">Gaming</a>
+											     		<a href="#">Music</a>
+											     		<a href="#">Sport</a>
+											     	</div>	
+											   	</div>
+								        	</div>
+								        </div>
+								        <div class="menu-list-home">
+								        	<i class="fas fa-envelope fa-lg"></i>
+								        		<a href="#">Contact</a>
+
+								        	<div class="menu-list-home-sub">	
+											    <div class="sub-tech">
+												    <a href="#" class="item-tech">Contact</a>
+													    <div class="sub-tech-arrow">
+															<img src="img/slider-img/right-arrow-slider.png">
+													    </div>
+												    <div class="sub-tech-link">
+												     	<a href="#">Software & Apps</a>
+											     		<a href="#">Gadgets</a>
+												     	<a href="#">Mobile</a>
+												    </div>	
+											     </div>
+											     <div class="sub-entertainment">
+													<a href="#" class="sub-enter">Entertainment</a>
+														<div class="sub-tech-arrow">
+															<img src="img/slider-img/right-arrow-slider.png">
+													    </div>
+											     	<div class="sub-enter-link">
+											     		<a href="#">Film</a>
+											     		<a href="#">Gaming</a>
+											     		<a href="#">Music</a>
+											     		<a href="#">Sport</a>
+											     	</div>	
+											   	</div>
+											   	<div class="sub-lifestyle">
+											   		<a href="#" class="item-lifestyle">Lifestyle</a>
+												   		<div class="sub-tech-arrow">
+															<img src="img/slider-img/right-arrow-slider.png">
+													    </div>
+											     	<div class="sub-lifestyle-link">
+											     		<a href="#">Home</a>
+											     		<a href="#">Health	& Fitness</a>
+											     		<a href="#">Travel & Leisure</a>
+											     	</div>
+											   	</div>
+								        	</div>
+								        </div>
+									     
+								
+									<!--BEGIN CONTACT BLOCK-->
+										<div class="nav-contact">
+											<div class="nav-contact-phone">
+												<div class="nav-contact-phone-icon">
+													<img src="img/social-icon/Phone-Icon.png">
+												</div>
+												<div class="nav-contact-phone-number">
+													<p>(912) 555-1234</br>
+													(912) 555-5678</p>
+												</div>
+											</div>
+											<div class="nav-contact-location">
+												<div class="nav-contact-location-icon">
+													<img src="img/social-icon/Pointer-Icon.png">
+												</div>
+												<div class="nav-contact-location-adress">
+													<p>1600 Pennsylvania </br>
+														Ave NW, Washington </br>
+														DC 20500, USA</p>
+												</div>
+											</div>
+											<div class="nav-contact-email">
+												<div class="nav-contact-email-icon">
+													<img src="img/social-icon/Email-Icon.png">
+												</div>
+												<div class="nav-contact-email-mail">
+													<p>hello@website.com</br>
+														office@website.com</p>
+												</div>
+											</div>
+										</div>
+									<!--CONTACT BLOCK EOF-->
+									</nav>
+								</div>
+							</div>
+						</div>
+						<!--DPORMENU BLOCK EOF-->
+
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+							<div class="content-block">
+								<div class="content-block-social">
+									<div class="social-item">
+										<div class="facebook">
+											<div class="facebook-img">
+												<img src="img/social-icon/Facebook-Content.png">
+											</div>
+											<div class="facebook-text">
+												<p>Facebook</p>
+											</div>
+										</div>
+										<div class="twitter">
+											<div class="twitter-img">
+												<img src="img/social-icon/Twitter-Content.png">
+											</div>
+											<div class="twitter-text">
+												<p>Twitter</p>
+											</div>
+										</div>
+										<div class="google">
+											<div class="google-img">
+												<img src="img/social-icon/G+Content.png">
+											</div>
+											<div class="google-text">
+												<p>Google&nbsp;+</p>
+											</div>
+										</div>
+										<div class="rss-feeds">
+											<div class="rss-feeds-img">
+												<img src="img/social-icon/Rss-Content.png">
+											</div>
+											<div class="rss-feeds-text">
+												<p>Rss&nbsp;Feeds</p>
+											</div>
+										</div>
+										<div class="pinterest">
+											<div class="pinterest-img">
+												<img src="img/social-icon/Pinterest-Content.png">
+											</div>
+											<div class="pinterest-text">
+												<p>Pinterest</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="content-block-widget">
+									<div class="widget-fb">
+										<div class="widget-fb-logo">
+											<img src="img/social-icon/Facebook-Icon-Widget.png">
+										</div>
+										<div class="widget-fb-subscribe">
+											<p>156K</p>
+										</div>
+										<div class="widget-fb-follow">
+											<p>Follow</p>
+											<a href="#" onclick="btnFacebook()">
+												<img src="img/social-icon/Follow.png">
+											</a>
+										</div>
+										<div class="widget-fb-follow_active" style="display: "></div>
+									</div>
+
+									<div class="widget-tw">
+										<div class="widget-tw-logo">
+											<img src="img/social-icon/Twitter-Widget.png">
+										</div>
+										<div class="widget-tw-subscribe">
+											<p>89K</p>
+										</div>
+										<div class="widget-tw-follow">
+											<p>Follow</p>
+											<a href="#" onclick="btnTwitter()">
+												<img src="img/social-icon/Follow.png">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+							<div class="content-block-sign">
+								<div class="sign-text">
+									<h3>Sign In</h3>
+									<p>Just select your favorite social network to get started</p>
+								</div>
+								<div class="sign-social_network">
+									<div class="social_network-fb">
+										<a href="#"><img src="img/social-icon/Facebook-Content.png"></a>
+									</div>
+									<div class="social_network-tw">
+										<a href="#"><img src="img/social-icon/Twitter-Content.png"></a>
+									</div>
+									<div class="social_network-google">
+										<a href="#"><img src="img/social-icon/G+Content.png"></a>
+									</div>
+									<div class="social_network-linkedin">
+										<a href="#"><img src="img/social-icon/LinkedIn-Content.png"></a>
+									</div>
+								</div>								
+							</div>
+							<div class="content-block-newsletter">
+								<div class="newsletter-text">
+									<h3>Join the Newsletter</h3>
+									<p>Sign up for our personalized daily newsletter</p>
+								</div>
+								<div class="newsletter-signUp">
+									<input type="email" name="email" placeholder="Enter email address">
+									<button class="btn btn-danger">Sign Up</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+<!--BEGIN SLIDER BLOCK-->
+	<section class="featured">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="featured-slider owl-carousel owl-theme">
+						<div class="featured-slider-item">
+							<div class="featured-box">
+								<img src="img/slider-img/03.png">
+								<div class="description">
+									
+									<h1>Featured Story</h1>
+									<p>Now that the holiday gift-giving time is over, we're </br>sure many of our readers unwrapped some new consoles. </br>
+									Despite its long life on the market..</p>
+									<button class="description-button">View More</button>
+								</div>
+							</div>
+						</div>
+						<div class="featured-slider-item">
+							<div class="featured-box">
+								<img src="img/slider-img/03.png">
+								<div class="description">
+									<h1>Featured Story</h1>
+									<p>Now that the holiday gift-giving time is over, we're </br>sure many of our readers unwrapped some new consoles. </br>
+									Despite its long life on the market..</p>
+									<button class="description-button">View More</button>
+								</div>
+							</div>>
+						</div>
+						<div class="featured-slider-item">
+							<div class="featured-box">
+								<img src="img/slider-img/03.png">
+								<div class="description">	
+									<h1>Featured Story</h1>
+									<p>Now that the holiday gift-giving time is over, we're </br>sure many of our readers unwrapped some new consoles. </br>
+									Despite its long life on the market..</p>
+									<button class="description-button">View More</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--SLIDER BLIOCK EOF-->
+<!-- CONTENT EOF   -->
+
+
+<!-- BEGIN FOOTER -->	
+	<footer>
+		<div class="wrapper">
+			
+		</div>		
+	</footer>
+<!--FOOTER EOF-->
+
+</div>
+
+
+	<!--BEGIN POPUP FORM-->
+	<div class="overlay"> </div>
+		<div class="popup" id="popup">
+			<div class="popup-text">
+				<h3>Ask a Question</h3>
+			</div>
+			<div class="popup-form">
+				<form id="myForm" action="/" method="POST">
+					<input type="name" name="name" placeholder="Your name">
+					<input type="email" name="email" placeholder="hello@graphicburger.com">
+					<textarea rows="3" name="user_message" placeholder="Your question..."></textarea>
+					<button class="btn btn-danger">Submit</button>
+				</form>
+			</div>
+		</div>
+	<!--POPUP FORM EOF-->
+
+	<script src="libs/jquery/jquery-3.3.1.js"></script> 
+	<script src="libs/bootstrap/bootstrap.min.js"></script>
+	<script src="libs/owl.carousel/owl.carousel.min.js"></script>
+	<script src="libs/jquery-validation/jquery.validate.js"></script>
+	<script src="js/scripts.min.js"></script>
+	<script>
+		$(document).ready(function(){
+           $("#myForm").validate({
+             rules:{
+                name:{
+                  required: true,
+                },
+                email:{
+                  required: true,
+                },
+             },
+             messages:{
+               name:{
+                 required: "Это поле обязательно для заполнения",
+                 minlength: "Логин должен быть минимум 4 символа",
+                 maxlength: "Максимальное число символов - 16",
+             	},
+             	email:{
+                 required: "Это поле обязательно для заполнения",
+                 minlength: "Логин должен быть минимум 4 символа",
+                 maxlength: "Максимальное число символов - 16",
+             	},
+             }
+          });
+ 
+});
+	</script>
+	<script>
+	$('.open_popup').click(function() {
+		var popup_id = $('#' + $(this).attr("rel"));
+			$(popup_id).show();
+			$('.overlay').show();
+	});
+
+		$('.popup .close, .overlay').click(function() {
+			$('.overlay, .popup').hide();
+		});
+	</script>
+	<script>
+	$(function() {
+	 	$(".owl-carousel").owlCarousel({
+			item: 1,
+		 	nav:true,
+			loop:true,
+			navText : ["<i class='fa fa-chevron-left'></i>",
+						"<i class='fa fa-chevron-right'></i>"],
+			responsive:{
+		        0:{
+		            items:1
+		        },
+		        600:{
+		            items:1
+		        },
+		        1000:{
+		            items:1
+		        }
+		    }
+	 	});
+	 	$(".menu-btn").click(function() {
+		  	$('.nav-block').toggle();
+		  	$('.content-block').toggleClass('content-block-actives');
+		});		
+	});
+	</script>
+</body>
+</html>

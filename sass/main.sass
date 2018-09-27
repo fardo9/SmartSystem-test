@@ -1,0 +1,656 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	background-image: url(../img/background.jpg)
+	background-size: cover
+	background-position: center
+	overflow-x: hidden
+	 
+
+
+.popup
+	display: none
+	background: $base-white
+	width: 300px 
+	height: 380px
+	&-form
+		width: 100% 
+		margin-top: 25px
+		margin-bottom: 25px
+		input
+			width: 100%
+			padding: 10px
+			margin-bottom: 20px
+			font-size: 12px
+			border: 1px solid #ccc
+			&:focus
+				outline: none !important
+				border: 1px solid $base-bg
+				box-shadow: 0 0 1px #719ECE
+		textarea
+			width: 100%
+			font-size: 12px
+			padding: 10px
+			border: 1px solid #ccc
+			&:focus
+				outline: none !important
+				border: 1px solid $base-bg
+				box-shadow: 0 0 1px #719ECE	
+		button
+			margin-top: 10px
+			margin-bottom: 20px
+			
+.main-wrapper
+	position: relative
+	overflow-x: hidden
+.navbar
+	display: flex
+	margin-left: 15px
+	margin-right: 15px
+    min-width: 100%
+	height: 60px
+	background-color: $base-white
+	border-radius: 0px
+	margin-top: 105px
+	
+
+.navbar-menu
+	display: flex
+	-webkit-flex-direction: row 
+	-ms-flex-direction: row 
+	flex-direction: row
+	width: 100%
+	&-block
+		width: 60px
+		height: 60px
+		margin-left: -17px
+		margin-top: -1px
+		&:active, &:focus
+			background-color: $base-bg
+		a span 
+
+	&-item
+		display: flex
+		margin-left: -37px
+		li
+			list-style-type: none
+			padding-left: 26px
+			-webkit-align-self: center 
+			align-self: center  
+			margin-top: 10px
+			a
+				color: #000
+				&:hover
+					text-decoration: none
+					color: $base-bg
+	&-btn
+		display: block
+		width: 60px
+		height: 60px
+		position: relative
+		z-index: 3
+		span
+			position: absolute
+			top: 51%
+			margin-top: -1px
+			left: 50%
+			margin-left: -10px
+			width: 20px
+			height: 3px
+			background-color: #222
+			&:hover, &:active
+				color: $base-white
+			&::before
+				position: absolute
+				top: 7px
+				margin-top: -1px
+				left: 50%
+				margin-left: -10px
+				width: 20px
+				height: 2px
+				background-color: #222
+				content: "";
+			&::after
+				position: absolute
+				top: -4px
+				margin-top: -1px
+				left: 50%
+				margin-left: -10px
+				width: 20px
+				height: 2px
+				background-color: #222
+				content: "";
+	&-social-item	
+		display: flex
+		-webkit-justify-content: flex-end 
+		justify-content: flex-end 
+		width: 100%
+		line-height: 55px
+		.item-search
+			display: flex
+			-webkit-justify-content: center 
+			justify-content: center 
+			margin-top: -1px
+			width: 60px
+			height: 60px
+			border-right: 1px solid #ccc 
+		.item-fb, .item-twitter, .item-google
+			display: flex
+			-webkit-justify-content: center 
+			justify-content: center 
+			margin-top: -1px
+			width: 40px
+			height: 40px
+		.item-user
+			display: flex
+			-webkit-justify-content: center 
+			justify-content: center 
+			margin-top: -1px
+			width: 60px
+			height: 60px
+			margin-right: -16px
+			border-left: 1px solid #ccc
+			a
+				i
+					color: $color-icon
+					&:hover
+						color: $base-bg
+			
+
+
+
+
+
+
+/*CONTENT BEGIN*/
+    
+	
+.content
+	transition: 0.5s
+    position: relative
+    z-index: 0
+
+/* .content_actives
+	transform: translateX(30%) */
+
+
+.content-block
+	display: flex
+	-webkit-flex-direction: row 
+	-ms-flex-direction: row 
+	flex-direction: row 
+	&-social
+		background-color: $base-white 
+		margin: 0px 20px 0px 0px
+		width: 100%
+		height: auto
+		.social-item
+			.facebook
+				margin-top: 30px
+				&-text
+					p
+						padding-left: 15px
+			.twitter, .google, .rss-feeds, .pinterest
+				margin-top: 22px
+				&-text
+					p
+						padding-left: 5px
+			.pinterest
+				margin-bottom: 30px
+				&-text
+					p
+						padding-left: 10px
+			.facebook, .twitter, .google, .rss-feeds,.pinterest
+				display: flex
+				-webkit-flex-direction: row 
+				-ms-flex-direction: row 
+				flex-direction: row 
+				width: 33px
+				height: 33px
+				border-radius: 50%
+				background-color: #c5cdd1 
+				margin-left: 30px
+				/* &:hover
+					color: $base-white */
+				&-img
+					display: flex
+					-webkit-justify-content: center 
+					justify-content: center 
+					-webkit-align-self: center 
+					align-self: center 
+					margin-left: 10px
+				&-text
+					display: flex
+					-webkit-justify-content: flex-start 
+					justify-content: flex-start 
+					-webkit-align-content: center 
+					align-content: center 
+					margin-left: 22px
+				p
+					&:first-child
+					padding-top: 5px
+					&:hover
+						color: $social-hover 
+						cursor: pointer
+				&:hover
+					background-color: $social-hover 
+					cursor: pointer
+
+
+	/*BEGIN CONTENT WIDGET*/
+
+
+	&-widget
+		display: flex
+		-webkit-flex-direction: column
+		-ms-flex-direction: column
+		flex-direction: column
+		width: 100%
+		.widget-fb
+			background-color: #4d6baa
+			width: 100%
+			height: 50% 
+			margin-bottom: 10px
+			&-logo
+				margin: 22px 0px 0px 30px
+			&-subscribe
+				position: absolute
+				top: 105px
+				p
+					font-size: 16px
+					font-family: 'Roboto', sans-serif
+					font-weight: 700 
+					color: $base-white
+					margin-left: 24px
+			&-follow
+				display: flex
+				-webkit-flex-direction: row
+				-ms-flex-direction: row
+				flex-direction: row
+				-webkit-justify-content: flex-end 
+				justify-content: flex-end 
+				margin-right: 15px
+				margin-top: 43px
+				p
+					margin-right: 15px
+					color: $base-white
+					font-weight: 300 
+					
+					
+		.widget-tw	
+			background-color: #4fc6f8 
+			width: 100%
+			height: 50%
+			margin-top: 10px
+			&-logo
+				margin: 22px 0px 0px 30px
+			&-subscribe
+				position: absolute
+				top: 275px
+				p
+					font-size: 16px
+					font-family: 'Roboto', sans-serif
+					font-weight: 700 
+					color: $base-white
+					margin-left: 24px
+					margin-top: 2px
+			&-follow
+				display: flex
+				-webkit-flex-direction: row
+				-ms-flex-direction: row
+				flex-direction: row
+				-webkit-justify-content: flex-end 
+				justify-content: flex-end 
+				margin-right: 15px
+				margin-top: 55px
+				p
+					margin-right: 15px
+					color: $base-white
+					font-weight: 300 
+					margin-top: 2px
+
+
+	/*CONTENT WIDGET EOF*/
+	
+	/*BEGIN CONTENT SIGN BLOCK*/
+	&-sign  
+		width: 100%
+		background-color: $base-white
+		height: 165px 
+		margin-top: 20px
+		padding: 0px 20px 
+		.sign-text
+			padding-top: 2px
+			h3, p
+				text-align: center
+		.sign-social_network
+			display: flex
+			-webkit-justify-content: center
+			justify-content: center
+			margin-top: 10px
+			.social_network-fb
+				width: 33px
+				height: 33px 
+				background-color: $fb-color
+				-webkit-border-radius: 50px 
+				 border-radius: 50px
+				margin-right: 23px
+				margin-left: 23px
+				
+				img
+					margin-left: 12px
+					margin-top: 5px
+			.social_network-tw, .social_network-google, .social_network-linkedin
+				width: 33px
+				height: 33px
+				-webkit-border-radius: 50px 
+				 border-radius: 50px
+				margin-right: 23px
+				img
+					margin-left: 8px
+					margin-top: 5px
+			.social_network-tw
+				background-color: $social-hover
+			.social_network-google
+				background-color: $google-color
+			.social_network-linkedin
+				background-color: $in-color
+			 
+	&-newsletter
+		width: 100%
+		background-color: $base-white
+		height: 165px 
+		margin-top: 20px
+		padding: 0 11px
+		margin-bottom: 20px
+		.newsletter-text
+			padding-top: 2px
+			h3,p
+				text-align: center
+		.newsletter-signUp
+			display: flex
+			-webkit-justify-content: center 
+			justify-content: center 
+			margin-top: 20px
+			width: 100%
+			padding: 0px 30px 
+			input
+				width: 100%
+				margin-right: 15px
+				border: 1px solid #ccc
+				outline: none
+				text-indent: 20px
+			button
+				width: 96px
+	/*CONTENT SIGN EOF*/
+	
+	
+	
+
+
+
+
+
+	/*BEGIN Customization jQuery Menu */
+	
+		/*BEGIN NAV_MENU BLOCK*/
+
+	
+.nav-block
+	display: none
+	-webkit-flex-direction: row 
+	-ms-flex-direction: row 
+	flex-direction: row
+	-webkit-transition: left 1s ease-out 0.5s
+	-moz-transition: left 1s ease-out 0.5s
+	-o-transition: left 1s ease-out 0.5s
+	transition: left 1s ease-out 0.5s	
+	
+.nav-menu
+	display: none
+	width: 50%
+	height: auto
+	z-index: 99
+	display: flex
+	-webkit-flex-direction: row 
+	-ms-flex-direction: row 
+	flex-direction: row 
+	align-items: center
+	justify-content: center
+	transition: 0.5s
+	background-color: $base-white
+	.menu-list
+		width: 100%
+		&-home
+			border-bottom: 1px solid $nav-contact-bg
+			padding: 18px
+			&:hover
+				background-color: $base-bg
+				color: $base-white 
+			a
+				color: $base-black
+				&:hover
+					text-decoration: none
+					color: $base-white 
+			i
+				margin-right: 25px
+				margin-left: 10px
+				color: $nav-contact-bg
+			&-sub
+				display: none	
+				width: 47%
+				height: auto
+				background-color: $base-subnav
+				position: absolute
+				left: 50%
+				top: 0px
+				.sub-tech, .sub-business, .sub-lifestyle
+					display: flex	
+					-webkit-flex-direction: column
+					-ms-flex-direction: column
+					flex-direction: column	
+					height: 190px
+					padding-top: 30px
+					padding-left: 35px
+					border-bottom: 1px solid #445e78	
+					&:hover
+						background-color: $base-subnav-hover
+						cursor: pointer
+						color: $base-white
+					a
+						color: $base-white
+						&:hover
+							text-decoration: none
+					&-arrow
+						width: 100%
+						display: flex
+						position: absolute
+						width: 20px
+						height: 20px
+						border-radius: 50px
+						left: 85%
+						background-color: $base-bg
+						img
+							width: 8px
+							height: 12px
+							margin-top: 4px 
+							margin-left: 7px
+					.item-tech, .item-business, .item-lifestyle
+						color: $base-bg
+					&-link
+						padding-top: 20px
+						display: flex
+						-webkit-flex-direction: column
+						-ms-flex-direction: column
+						flex-direction: column
+						
+				.sub-entertainment
+					display: flex	
+					-webkit-flex-direction: column
+					-ms-flex-direction: column
+					flex-direction: column
+					height: 205px
+					padding-top: 30px
+					padding-left: 35px
+					border-bottom: 1px solid #445e78
+					&:hover
+						background-color: $base-subnav-hover
+						cursor: pointer
+						color: $base-white
+					a
+						color: $base-white
+						&:hover
+							text-decoration: none
+					.sub-enter
+						color: $base-bg
+						&-link
+							padding-top: 15px
+							display: flex
+							-webkit-flex-direction: column
+							-ms-flex-direction: column
+							flex-direction: column
+					
+
+					
+				
+				
+	.nav-contact
+		width: 100%
+		height: auto
+		background-color: $nav-contact-bg
+		-webkit-box-shadow: inset 0px 3px 5px 1px rgba(178,186,190,1)
+		-moz-box-shadow: inset 0px 3px 5px 1px rgba(178,186,190,1)
+		box-shadow: inset 0px 3px 5px 1px rgba(178,186,190,1) 
+		&-phone, &-location, &-email
+			display: flex
+			-webkit-flex-direction: row
+			-ms-flex-direction: row
+			flex-direction: row
+			padding-top: 30px
+			padding-left: 30px
+			&-icon,
+				padding-top: 0px
+				margin-right: 20px
+			&-number, &-adress, &-mail
+				color: $base-white
+				font-family: 'Roboto', sans-serif 
+		&-email
+			padding-bottom: 15px
+			
+.content-block
+  transform: translateX(-584px)
+.content-block-actives
+	transform: translateX(0)
+.actives
+	display: block
+
+
+				    
+	/*NAV_MENU BLOCK EOF*/	
+
+	/*Customization jQuery Menu EOF*/
+
+/*CONTENT EOF*/
+
+.featured
+	margin-top: 35px
+	&-slider
+		margin-bottom: 30px
+		&-item
+			width: 100%
+			height: 455px
+			img
+				width: 100%
+.featured-box
+	.description
+		position: absolute
+		display: flex
+		-webkit-justify-content: flex-start 
+		justify-content: flex-start 
+		-webkit-flex-direction: column
+		-ms-flex-direction: column
+		flex-direction: column
+		width: 100%
+		top: 0
+		left: 60px
+		z-index: 999
+		p
+			padding-top: 30px
+		&-button
+			display: flex
+			-webkit-justify-content: center 
+			justify-content: center 
+			text-decoration: none
+			position: fixed
+			padding: 10px
+			color: $base-white
+			width: 170px
+			height: 50px
+			cursor: pointer
+			border: 1px solid $base-white 
+			border-radius: 5px
+			margin-top: 40px
+			top: 39%
+			background-color: transparent 
+			&:hover
+				cursor: pointer
+				background-color: #ccc
+				color: #FFF
+				width: 170px
+				height: 50px
+				border-radius: 5px
+				border: 1px solid $base-white
+
+
+
+.owl-nav
+	width: 100%
+	position: absolute
+	top: 45%
+	.owl-prev
+		float: left
+		margin-top: 30px
+		margin-left: 0px !important
+		width: 35px
+		height: 50px
+		i
+			margin-top: 15px
+	.owl-next
+		float: right
+		margin-right: 0px !important
+		width: 35px
+		height: 50px
+		i
+			margin-top: 15px
+.owl-dots
+	display: flex
+	-webkit-justify-content: center 
+				justify-content: center 			
+	position: absolute 
+	width: 100%
+	top: 90%
+label
+	font-size: 10px
+	
+
+@import "media"
